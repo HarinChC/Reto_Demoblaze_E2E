@@ -3,7 +3,6 @@
     #Correo:Harin911227@hotmail.com
     #Correo:Harinchc11@gmail.com
 
-@Regresion
 Característica: registrar usuario en el aplicativo de Demoblaze
   Como posible usuario de la aplicación demoblaze y que
   Quiero realizar diferentes tareas en su aplicativo
@@ -15,5 +14,5 @@ Característica: registrar usuario en el aplicativo de Demoblaze
     Cuando se nos muestra la pantalla inicial
     Entonces hacemos clic en “Sing UP” para crear una cuenta "<usuario>""<clave>"
     Ejemplos:
-      | usuario    | clave     |
-      | Harinch567 | Harinc123 |
+      | usuario     | clave     |
+      | Harinch1111 | Harinc123 |

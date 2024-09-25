@@ -25,10 +25,10 @@ public class ValidacioUsuarioInicioSesion implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         actor.attemptsTo(
-                WaitUntil.the(LBL_PRODUCTOCARRITO, isVisible()).forNoMoreThan(15).seconds()
+                WaitUntil.the(LBL_BIENVENIDA_NOMBREU, isVisible()).forNoMoreThan(15).seconds()
         );
-        if(actor.asksFor(Visibility.of(LBL_PRODUCTOCARRITO).asBoolean())){
-            String obtainedMessage = actor.asksFor((TextContent.of(LBL_PRODUCTOCARRITO)));
+        if(actor.asksFor(Visibility.of(LBL_BIENVENIDA_NOMBREU).asBoolean())){
+            String obtainedMessage = actor.asksFor((TextContent.of(LBL_BIENVENIDA_NOMBREU)));
             return obtainedMessage.contains(nombreEsperado);
         } else {
             return false;
