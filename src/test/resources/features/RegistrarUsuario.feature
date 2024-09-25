@@ -15,5 +15,5 @@ Característica: registrar usuario en el aplicativo de Demoblaze
     Cuando se nos muestra la pantalla inicial
     Entonces hacemos clic en “Sing UP” para crear una cuenta "<usuario>""<clave>"
     Ejemplos:
-      | usuario  | clave     |
-      | Harinch5 | Harinchc3 |
+      | usuario    | clave     |
+      | Harinch567 | Harinc123 |
