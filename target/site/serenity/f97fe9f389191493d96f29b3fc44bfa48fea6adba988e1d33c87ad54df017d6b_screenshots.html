@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="41f52285f526d690ba32459485327585c5ead85d5e464e06023f9eab04db01db.html">Registrar Usuario En El Aplicativo De Demoblaze</a></span>
+                > <span class="truncate-60"><a
+                    href="f97fe9f389191493d96f29b3fc44bfa48fea6adba988e1d33c87ad54df017d6b.html">El cliente quiere iniciar sesion con sus credenciales y validar el modal </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 12-08-2025 23:01</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Registrar Usuario En El Aplicativo De Demoblaze </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como posible usuario de la aplicación demoblaze y que<br />
+Quiero realizar diferentes tareas en su aplicativo<br />
+Requiero realizar el registro de mi usuario en la misma para tener los privilegios como cliente
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="48320aa7fd54748f4799506b8c291543ea7331e194d0ed326b3e36ec716fe638.html">Ca06
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="4b0f801684eed0d4cda206149ed61bc56b2322a87ec3f0cb4ae38ad1478af212.html">Validar Modal
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">El cliente quiere iniciar sesion con sus credenciales y validar el modal
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Cuando ingresamos con nuestras credenciales "&lt;usuario&gt;""&lt;clave&gt;"<br>Y hacemos click en “Log in” para ingresar con nuestra cuenta<br>Y hacemos clic en la categoría de “Phone”<br>Y doy click en “Samsung galaxy s6 ”<br>Y hacemos clic en “Add to Cart ”<br>Entonces nos debe mostrar un modal con el mensaje "Product added"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="a4c6ff501ecadc91416da54105b95d33436e595f0cb35448d401f6a30eb52bd0.png" title=" 1: El cliente quiere iniciar sesion con sus credenciales y validar el modal ({usuario=Harinch0001, clave=Harinc001*})" width="0"/>
+                <img src="a4c6ff501ecadc91416da54105b95d33436e595f0cb35448d401f6a30eb52bd0.png" title=" Dado que el &quot;usuario&quot; ingresa a la url demoblaze" width="0"/>
+                <img src="a4c6ff501ecadc91416da54105b95d33436e595f0cb35448d401f6a30eb52bd0.png" title=" usuario opens the browser at https://www.demoblaze.com/index.html" width="0"/>
+                <img src="a4c6ff501ecadc91416da54105b95d33436e595f0cb35448d401f6a30eb52bd0.png" title=" Dado que el &quot;usuario&quot; ingresa a la url demoblaze (completed)" width="0"/>
+                <img src="a4c6ff501ecadc91416da54105b95d33436e595f0cb35448d401f6a30eb52bd0.png" title=" Cuando ingresamos con nuestras credenciales &quot;Harinch0001&quot;&quot;Harinc001*&quot;" width="0"/>
+                <img src="fafe5cf7d6856cd1a0ce6aae2350e6ef2d2a3caf3cc963f4a7e53e925764f671.png" title=" Usuario iniciar sesion" width="0"/>
+                <img src="94e152d4c4abeb0b380439d3a0820a1ba29911daac548da867fc45000e619c26.png" title=" usuario clicks on Boton de iniciar sesion" width="0"/>
+                <img src="f256e6f3c05943fe65b87d4230b17efafde23051f70936e34d2d48cf0418e740.png" title=" usuario clicks on Boton de iniciar sesion (completed)" width="0"/>
+                <img src="f256e6f3c05943fe65b87d4230b17efafde23051f70936e34d2d48cf0418e740.png" title=" usuario enters 'Harinch0001' into Nombre usuario inicio sesion" width="0"/>
+                <img src="33ce13af86631a479defe0ae00bcf7453a6e27af096e15f8797ad36c99191a75.png" title=" usuario enters 'Harinch0001' into Nombre usuario inicio sesion (completed)" width="0"/>
+                <img src="33ce13af86631a479defe0ae00bcf7453a6e27af096e15f8797ad36c99191a75.png" title=" usuario enters 'Harinc001*' into Clave de usuario de inicio sesion" width="0"/>
+                <img src="00ffbd403d88456489c68ba8ab25e7b7f17c2d683f933f9d93177d4e840e4b83.png" title=" usuario enters 'Harinc001*' into Clave de usuario de inicio sesion (completed)" width="0"/>
+                <img src="00ffbd403d88456489c68ba8ab25e7b7f17c2d683f933f9d93177d4e840e4b83.png" title=" Usuario esperar" width="0"/>
+                <img src="ae747c7d161d4cbad009f7857cba8deaba085f6cc4462e01e994b930613248c8.png" title=" Usuario esperar (completed)" width="0"/>
+                <img src="ae747c7d161d4cbad009f7857cba8deaba085f6cc4462e01e994b930613248c8.png" title=" Usuario iniciar sesion (completed)" width="0"/>
+                <img src="ae747c7d161d4cbad009f7857cba8deaba085f6cc4462e01e994b930613248c8.png" title=" Cuando ingresamos con nuestras credenciales &quot;Harinch0001&quot;&quot;Harinc001*&quot; (completed)" width="0"/>
+                <img src="ae747c7d161d4cbad009f7857cba8deaba085f6cc4462e01e994b930613248c8.png" title=" Y hacemos click en &ldquo;Log in&rdquo; para ingresar con nuestra cuenta" width="0"/>
+                <img src="ae747c7d161d4cbad009f7857cba8deaba085f6cc4462e01e994b930613248c8.png" title=" Usuario click inicio sesion" width="0"/>
+                <img src="ae747c7d161d4cbad009f7857cba8deaba085f6cc4462e01e994b930613248c8.png" title=" usuario clicks on Boton de inicio sesion" width="0"/>
+                <img src="c895e41e62a1d37cf992ae8f48c7e45ed7f978554df48f6e8f90844eff3c69cc.png" title=" usuario clicks on Boton de inicio sesion (completed)" width="0"/>
+                <img src="c895e41e62a1d37cf992ae8f48c7e45ed7f978554df48f6e8f90844eff3c69cc.png" title=" Usuario esperar" width="0"/>
+                <img src="39d083cdf9d1a9acd7089f5736b73061583baa1559ed9cd8bc23fccb22e4bc8a.png" title=" Usuario esperar (completed)" width="0"/>
+                <img src="39d083cdf9d1a9acd7089f5736b73061583baa1559ed9cd8bc23fccb22e4bc8a.png" title=" Usuario click inicio sesion (completed)" width="0"/>
+                <img src="39d083cdf9d1a9acd7089f5736b73061583baa1559ed9cd8bc23fccb22e4bc8a.png" title=" Y hacemos click en &ldquo;Log in&rdquo; para ingresar con nuestra cuenta (completed)" width="0"/>
+                <img src="39d083cdf9d1a9acd7089f5736b73061583baa1559ed9cd8bc23fccb22e4bc8a.png" title=" Y hacemos clic en la categor&iacute;a de &ldquo;Phone&rdquo;" width="0"/>
+                <img src="39d083cdf9d1a9acd7089f5736b73061583baa1559ed9cd8bc23fccb22e4bc8a.png" title=" Usuario ir a telefonos" width="0"/>
+                <img src="39d083cdf9d1a9acd7089f5736b73061583baa1559ed9cd8bc23fccb22e4bc8a.png" title=" usuario clicks on Boton de telefono phone" width="0"/>
+                <img src="39d083cdf9d1a9acd7089f5736b73061583baa1559ed9cd8bc23fccb22e4bc8a.png" title=" Usuario esperar" width="0"/>
+                <img src="39d083cdf9d1a9acd7089f5736b73061583baa1559ed9cd8bc23fccb22e4bc8a.png" title=" Y doy click en &ldquo;Samsung galaxy s6 &rdquo;" width="0"/>
+                <img src="39d083cdf9d1a9acd7089f5736b73061583baa1559ed9cd8bc23fccb22e4bc8a.png" title=" Usuario click telefono samsung gs6" width="0"/>
+                <img src="39d083cdf9d1a9acd7089f5736b73061583baa1559ed9cd8bc23fccb22e4bc8a.png" title=" usuario clicks on Telefono samsung" width="0"/>
+                <img src="0b7e183f07e193bc82601a1427fe901b9b4241620dbcbba91ecdead4d6315dd2.png" title=" usuario clicks on Telefono samsung (completed)" width="0"/>
+                <img src="0b7e183f07e193bc82601a1427fe901b9b4241620dbcbba91ecdead4d6315dd2.png" title=" Usuario esperar" width="0"/>
+                <img src="6ff8cbb85276ab7122665eb4acc3ac0180c0621f27a8c38f8171b253c202a881.png" title=" Usuario esperar (completed)" width="0"/>
+                <img src="6ff8cbb85276ab7122665eb4acc3ac0180c0621f27a8c38f8171b253c202a881.png" title=" Usuario click telefono samsung gs6 (completed)" width="0"/>
+                <img src="6ff8cbb85276ab7122665eb4acc3ac0180c0621f27a8c38f8171b253c202a881.png" title=" Y doy click en &ldquo;Samsung galaxy s6 &rdquo; (completed)" width="0"/>
+                <img src="6ff8cbb85276ab7122665eb4acc3ac0180c0621f27a8c38f8171b253c202a881.png" title=" Y hacemos clic en &ldquo;Add to Cart &rdquo;" width="0"/>
+                <img src="6ff8cbb85276ab7122665eb4acc3ac0180c0621f27a8c38f8171b253c202a881.png" title=" Usuario click agregar al carrito" width="0"/>
+                <img src="6ff8cbb85276ab7122665eb4acc3ac0180c0621f27a8c38f8171b253c202a881.png" title=" usuario clicks on Boton de agregar al carrito" width="0"/>
+                <img src="9209aec9d146bef42b09af361f855270f7d7016c0629da5a9963dc4f7b19bb7b.png" title=" usuario clicks on Boton de agregar al carrito (completed)" width="0"/>
+                <img src="9209aec9d146bef42b09af361f855270f7d7016c0629da5a9963dc4f7b19bb7b.png" title=" Usuario esperar" width="0"/>
+                <img src="6ed277e01df76bba6b780efbac58d8b3ab50c6fcfda16698a0d080c0976e330e.png" title=" Entonces nos debe mostrar un modal con el mensaje &quot;Product added&quot;" width="0"/>
+                <img src="6ed277e01df76bba6b780efbac58d8b3ab50c6fcfda16698a0d080c0976e330e.png" title=" Then validacion modal" width="0"/>
+                <img src="6ed277e01df76bba6b780efbac58d8b3ab50c6fcfda16698a0d080c0976e330e.png" title=" usuario accepts the alert dialog" width="0"/>
+                <img src="6ed277e01df76bba6b780efbac58d8b3ab50c6fcfda16698a0d080c0976e330e.png" title=" Then validacion modal (completed)" width="0"/>
+                <img src="6ed277e01df76bba6b780efbac58d8b3ab50c6fcfda16698a0d080c0976e330e.png" title=" Entonces nos debe mostrar un modal con el mensaje &quot;Product added&quot; (completed)" width="0"/>
+
+                <img src="6ed277e01df76bba6b780efbac58d8b3ab50c6fcfda16698a0d080c0976e330e.png" title=" 1: El cliente quiere iniciar sesion con sus credenciales y validar el modal ({usuario=Harinch0001, clave=Harinc001*}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.46</span>
+</div>
+</body>
+</html>

@@ -10,7 +10,7 @@ import static co.com.demoblaze.www.utils.Constantes.*;
 //CONFIGURCION DE CUCUMBER
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = INICIARSESION,
+        features = CONTROLDEACCESO,
         glue=GLUE_STEP_DEFINITIONS,
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         tags = "@CA03"

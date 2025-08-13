@@ -4,14 +4,13 @@ import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
-import static co.com.demoblaze.www.utils.Constantes.GLUE_STEP_DEFINITIONS;
-import static co.com.demoblaze.www.utils.Constantes.REGISTRARSE;
+import static co.com.demoblaze.www.utils.Constantes.*;
 
 
 //CONFIGURCION DE CUCUMBER
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = REGISTRARSE,
+        features = CONTROLDEACCESO,
         glue=GLUE_STEP_DEFINITIONS,
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         tags = "@CA01"

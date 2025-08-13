@@ -9,7 +9,7 @@ import static co.com.demoblaze.www.utils.Constantes.*;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = VALIDARTELEFONOS,
+        features = GESTIONPRODUTOS,
         glue=GLUE_STEP_DEFINITIONS,
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         tags = "@CA04"

@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="41f52285f526d690ba32459485327585c5ead85d5e464e06023f9eab04db01db.html">Registrar Usuario En El Aplicativo De Demoblaze</a></span>
+                > <span class="truncate-60"><a
+                    href="2e534750f420e2155f7e4a11f635c11a6eb92375f6a7d3b62c03e39a6adf471f.html">El cliente quiere iniciar sesion con sus credenciales y validar el carrito </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 12-08-2025 23:02</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Registrar Usuario En El Aplicativo De Demoblaze </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como posible usuario de la aplicación demoblaze y que<br />
+Quiero realizar diferentes tareas en su aplicativo<br />
+Requiero realizar el registro de mi usuario en la misma para tener los privilegios como cliente
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="0271d3e3459516a08f111abf67eccc82fd221edbe88f2ce59f40a2efdd091d9b.html">Ca07
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="732d0dad59c98736db063fb8ad84f2c4a4520943c66b5b62d43d74a777ab8d2a.html">Validarcarrito
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">El cliente quiere iniciar sesion con sus credenciales y validar el carrito
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Cuando ingresamos con nuestras credenciales "&lt;usuario&gt;""&lt;clave&gt;"<br>Y hacemos click en “Log in” para ingresar con nuestra cuenta<br>Y hacemos clic en la categoría de “Phone”<br>Y doy click en “Samsung galaxy s6 ”<br>Y hacemos clic en “Add to Cart ”<br>Y acedemos al carrito para verificar que este agregado el telefono<br>Entonces nos debe mostrar el telefono "Samsung galaxy s6"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="58f32a55b94d2ef8afda58b46854fa50bb9bf094338ca4e30e863699dc75660b.png" title=" 1: El cliente quiere iniciar sesion con sus credenciales y validar el carrito ({usuario=Harinch0001, clave=Harinc001*})" width="0"/>
+                <img src="58f32a55b94d2ef8afda58b46854fa50bb9bf094338ca4e30e863699dc75660b.png" title=" Dado que el &quot;usuario&quot; ingresa a la url demoblaze" width="0"/>
+                <img src="58f32a55b94d2ef8afda58b46854fa50bb9bf094338ca4e30e863699dc75660b.png" title=" usuario opens the browser at https://www.demoblaze.com/index.html" width="0"/>
+                <img src="58f32a55b94d2ef8afda58b46854fa50bb9bf094338ca4e30e863699dc75660b.png" title=" Dado que el &quot;usuario&quot; ingresa a la url demoblaze (completed)" width="0"/>
+                <img src="58f32a55b94d2ef8afda58b46854fa50bb9bf094338ca4e30e863699dc75660b.png" title=" Cuando ingresamos con nuestras credenciales &quot;Harinch0001&quot;&quot;Harinc001*&quot;" width="0"/>
+                <img src="f4abc1237a0b36946832b896ed8cf72feb7f908d9a63a474af0e112e535d2267.png" title=" Usuario iniciar sesion" width="0"/>
+                <img src="9da91fb39d2b6d7d41bc6c6bfb24e9b0cbbfacaec7a02a19b60064377425fbb6.png" title=" usuario clicks on Boton de iniciar sesion" width="0"/>
+                <img src="5b5ef8d521821eaf0ff43c32110ec8b40ddb3978bc8f567a0224cd6a4845f028.png" title=" usuario clicks on Boton de iniciar sesion (completed)" width="0"/>
+                <img src="5b5ef8d521821eaf0ff43c32110ec8b40ddb3978bc8f567a0224cd6a4845f028.png" title=" usuario enters 'Harinch0001' into Nombre usuario inicio sesion" width="0"/>
+                <img src="cb48b9e5a6b1608f5e7f33d89d674ebc78e0bc45046de8396dee041840ca7cdf.png" title=" usuario enters 'Harinch0001' into Nombre usuario inicio sesion (completed)" width="0"/>
+                <img src="cb48b9e5a6b1608f5e7f33d89d674ebc78e0bc45046de8396dee041840ca7cdf.png" title=" usuario enters 'Harinc001*' into Clave de usuario de inicio sesion" width="0"/>
+                <img src="00ffbd403d88456489c68ba8ab25e7b7f17c2d683f933f9d93177d4e840e4b83.png" title=" usuario enters 'Harinc001*' into Clave de usuario de inicio sesion (completed)" width="0"/>
+                <img src="00ffbd403d88456489c68ba8ab25e7b7f17c2d683f933f9d93177d4e840e4b83.png" title=" Usuario esperar" width="0"/>
+                <img src="ae747c7d161d4cbad009f7857cba8deaba085f6cc4462e01e994b930613248c8.png" title=" Usuario esperar (completed)" width="0"/>
+                <img src="ae747c7d161d4cbad009f7857cba8deaba085f6cc4462e01e994b930613248c8.png" title=" Usuario iniciar sesion (completed)" width="0"/>
+                <img src="ae747c7d161d4cbad009f7857cba8deaba085f6cc4462e01e994b930613248c8.png" title=" Cuando ingresamos con nuestras credenciales &quot;Harinch0001&quot;&quot;Harinc001*&quot; (completed)" width="0"/>
+                <img src="ae747c7d161d4cbad009f7857cba8deaba085f6cc4462e01e994b930613248c8.png" title=" Y hacemos click en &ldquo;Log in&rdquo; para ingresar con nuestra cuenta" width="0"/>
+                <img src="ae747c7d161d4cbad009f7857cba8deaba085f6cc4462e01e994b930613248c8.png" title=" Usuario click inicio sesion" width="0"/>
+                <img src="ae747c7d161d4cbad009f7857cba8deaba085f6cc4462e01e994b930613248c8.png" title=" usuario clicks on Boton de inicio sesion" width="0"/>
+                <img src="a9a94b978130ef595c3b530282de5776720eea2deb55c85a35ca93b461ccc7e1.png" title=" usuario clicks on Boton de inicio sesion (completed)" width="0"/>
+                <img src="a9a94b978130ef595c3b530282de5776720eea2deb55c85a35ca93b461ccc7e1.png" title=" Usuario esperar" width="0"/>
+                <img src="9b640de213abc272d371da34aa39ebaae1b907b5514f0b93379982bf0f8fc29c.png" title=" Usuario esperar (completed)" width="0"/>
+                <img src="9b640de213abc272d371da34aa39ebaae1b907b5514f0b93379982bf0f8fc29c.png" title=" Usuario click inicio sesion (completed)" width="0"/>
+                <img src="9b640de213abc272d371da34aa39ebaae1b907b5514f0b93379982bf0f8fc29c.png" title=" Y hacemos click en &ldquo;Log in&rdquo; para ingresar con nuestra cuenta (completed)" width="0"/>
+                <img src="9b640de213abc272d371da34aa39ebaae1b907b5514f0b93379982bf0f8fc29c.png" title=" Y hacemos clic en la categor&iacute;a de &ldquo;Phone&rdquo;" width="0"/>
+                <img src="9b640de213abc272d371da34aa39ebaae1b907b5514f0b93379982bf0f8fc29c.png" title=" Usuario ir a telefonos" width="0"/>
+                <img src="9b640de213abc272d371da34aa39ebaae1b907b5514f0b93379982bf0f8fc29c.png" title=" usuario clicks on Boton de telefono phone" width="0"/>
+                <img src="9b640de213abc272d371da34aa39ebaae1b907b5514f0b93379982bf0f8fc29c.png" title=" Usuario esperar" width="0"/>
+                <img src="9b640de213abc272d371da34aa39ebaae1b907b5514f0b93379982bf0f8fc29c.png" title=" Y doy click en &ldquo;Samsung galaxy s6 &rdquo;" width="0"/>
+                <img src="9b640de213abc272d371da34aa39ebaae1b907b5514f0b93379982bf0f8fc29c.png" title=" Usuario click telefono samsung gs6" width="0"/>
+                <img src="9b640de213abc272d371da34aa39ebaae1b907b5514f0b93379982bf0f8fc29c.png" title=" usuario clicks on Telefono samsung" width="0"/>
+                <img src="0b7e183f07e193bc82601a1427fe901b9b4241620dbcbba91ecdead4d6315dd2.png" title=" usuario clicks on Telefono samsung (completed)" width="0"/>
+                <img src="0b7e183f07e193bc82601a1427fe901b9b4241620dbcbba91ecdead4d6315dd2.png" title=" Usuario esperar" width="0"/>
+                <img src="6ff8cbb85276ab7122665eb4acc3ac0180c0621f27a8c38f8171b253c202a881.png" title=" Usuario esperar (completed)" width="0"/>
+                <img src="6ff8cbb85276ab7122665eb4acc3ac0180c0621f27a8c38f8171b253c202a881.png" title=" Usuario click telefono samsung gs6 (completed)" width="0"/>
+                <img src="6ff8cbb85276ab7122665eb4acc3ac0180c0621f27a8c38f8171b253c202a881.png" title=" Y doy click en &ldquo;Samsung galaxy s6 &rdquo; (completed)" width="0"/>
+                <img src="6ff8cbb85276ab7122665eb4acc3ac0180c0621f27a8c38f8171b253c202a881.png" title=" Y hacemos clic en &ldquo;Add to Cart &rdquo;" width="0"/>
+                <img src="6ff8cbb85276ab7122665eb4acc3ac0180c0621f27a8c38f8171b253c202a881.png" title=" Usuario click agregar al carrito" width="0"/>
+                <img src="6ff8cbb85276ab7122665eb4acc3ac0180c0621f27a8c38f8171b253c202a881.png" title=" usuario clicks on Boton de agregar al carrito" width="0"/>
+                <img src="252b487b3e10b05694b55d89d83fd1ff58f42c1de148abc1f2626c1ec99e9d9b.png" title=" usuario clicks on Boton de agregar al carrito (completed)" width="0"/>
+                <img src="252b487b3e10b05694b55d89d83fd1ff58f42c1de148abc1f2626c1ec99e9d9b.png" title=" Usuario esperar" width="0"/>
+                <img src="2f4900cb4e508e54d0f518248d4311f9c6af624a4c3aacede442cd4a6e92c14b.png" title=" Y acedemos al carrito para verificar que este agregado el telefono" width="0"/>
+                <img src="2f4900cb4e508e54d0f518248d4311f9c6af624a4c3aacede442cd4a6e92c14b.png" title=" Usuario ir a carritode compras" width="0"/>
+                <img src="2f4900cb4e508e54d0f518248d4311f9c6af624a4c3aacede442cd4a6e92c14b.png" title=" usuario clicks on Boton ir al carrito" width="0"/>
+                <img src="e6018fb5440713dda272077b8f9304461a1a5831d83776c6eeb9a608eeac4b62.png" title=" usuario clicks on Boton ir al carrito (completed)" width="0"/>
+                <img src="e6018fb5440713dda272077b8f9304461a1a5831d83776c6eeb9a608eeac4b62.png" title=" Usuario esperar" width="0"/>
+                <img src="a8f20240c19b0808e01f1407141d9790382b225f6e2b09dc88cf5c9868654199.png" title=" Usuario esperar (completed)" width="0"/>
+                <img src="a8f20240c19b0808e01f1407141d9790382b225f6e2b09dc88cf5c9868654199.png" title=" Usuario ir a carritode compras (completed)" width="0"/>
+                <img src="a8f20240c19b0808e01f1407141d9790382b225f6e2b09dc88cf5c9868654199.png" title=" Y acedemos al carrito para verificar que este agregado el telefono (completed)" width="0"/>
+                <img src="a8f20240c19b0808e01f1407141d9790382b225f6e2b09dc88cf5c9868654199.png" title=" Entonces nos debe mostrar el telefono &quot;Samsung galaxy s6&quot;" width="0"/>
+                <img src="40b12cef6e8d41e1026289a4b75f6065cc3d22782e3899a9866bcdd69e45b1d4.png" title=" Then validacion carrito compra" width="0"/>
+                <img src="b7615fa2a5319ea16b266a2984c36a6f5ebdd0270d05ef68cdae149638306373.png" title=" Then validacion carrito compra (completed)" width="0"/>
+                <img src="b7615fa2a5319ea16b266a2984c36a6f5ebdd0270d05ef68cdae149638306373.png" title=" Entonces nos debe mostrar el telefono &quot;Samsung galaxy s6&quot; (completed)" width="0"/>
+
+                <img src="b7615fa2a5319ea16b266a2984c36a6f5ebdd0270d05ef68cdae149638306373.png" title=" 1: El cliente quiere iniciar sesion con sus credenciales y validar el carrito ({usuario=Harinch0001, clave=Harinc001*}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.46</span>
+</div>
+</body>
+</html>
