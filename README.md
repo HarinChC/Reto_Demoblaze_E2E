@@ -1,5 +1,6 @@
 # 📌Reto_Demoblaze
-Escenarios creados Casos de pruebas de flujos del aplicativo DEMOBLAZE
+Escenarios creados Casos de pruebas de flujos del aplicativo DEMOBLAZE desarrollado en Java con Cucumber y Gradle.
+
 
 # Descripción
 Este repositorio contiene las pruebas automatizadas para validar el funcionamiento de la aplicación web DemoBlaze. Las pruebas se han diseñado para cubrir una regresion en el aplicativo.
